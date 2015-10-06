@@ -1,0 +1,64 @@
+1.使用show语句
+2.使用create
+3.增
+4.删
+5.改
+6.查
+
+
+1.使用show语句
+找出服务器上当前存在什么数据库
+show databases;
+查看现在的数据库中存在什么元素
+show tables;
+查看警告
+show warnings
+
+
+describe bilibili;
+
+2.使用create
+创建一个数据库MysqlData
+create database MysqlData;
+创建一个数据表 mytable
+create table user (name varchar(20), sex varchar(1));
+create table bilibili (time TIMESTAMP);
+<d p="63.925,1,25,16777215,1443917346,0,6420dce7,1251806393">没想到能看到第二部</d>
+3.使用describe
+查询表结构
+describe bilibili;
+
+4.增
+往表中加入记录
+insert into bilibili values (FROM_UNIXTIME(1443917346, '%Y-%m-%d %H:%m:%s'));
+
+5.删
+删除表
+drop table bilibili;
+清空表
+delete from bilibili;
+
+5.改
+update mytable set sex="f" where name = 'hyq';
+
+
+6.函数
+将时间戳转换为时间
+SELECT FROM_UNIXTIME(1443917346, '%Y-%m-%d %H:%m:%s');
+
+
+
+
+Bilibil 
+create table bilibili (id int primary key auto_increment, time TIMESTAMP, text varchar(1024));
+
+<d p="63.925,1,25,16777215,1443917346,0,6420dce7,1251806393">没想到能看到第二部</d>
+insert into bilibili values (1,FROM_UNIXTIME(1443917346, '%Y-%m-%d %H:%m:%s'), '没想到能看到第二部');
+insert into bilibili (time, text) values (FROM_UNIXTIME(1443917346, '%Y-%m-%d %H:%m:%s'), '没想到能看到第二部');
+
+show variables like "%character%";
+
+
+CREATE DATABASE 'bili' 
+CHARACTER SET 'utf8' 
+COLLATE 'utf8_general_ci';
